@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EV Charging Stations</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+        <div class="container">
+
+            <a class="navbar-brand" href="index.html">
+                ⚡ EV Charge Finder
+            </a>
+
+            <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            Home
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="stations.html">
+                            Stations
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="booking.html">
+                            Booking
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">
+                            About
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">
+                            Contact
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Page Heading -->
+    <section class="py-5">
+
+        <div class="container">
+
+            <div class="text-center mb-4">
+
+                <h1 class="fw-bold">
+                    EV Charging Stations
+                </h1>
+
+                <p class="text-muted">
+                    Find a charging station near you
+                </p>
+
+            </div>
+
+
+            <!-- Search Bar -->
+            <div class="row justify-content-center mb-4">
+
+                <div class="col-md-8">
+
+                    <div class="input-group input-group-lg">
+
+                        <span class="input-group-text">
+                            📍
+                        </span>
+
+                        <input type="text"
+                            class="form-control"
+                            id="stationSearch"
+                            placeholder="Enter city or area">
+
+                        <button class="btn btn-success"
+                            onclick="searchStations()">
+                            Search Stations
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Search Message -->
+            <p id="searchMessage"
+                class="text-center mt-3">
+            </p>
+
+
+            <!-- Stations -->
+            <div class="row g-4 mt-2" id="stationsContainer">
+
+
+                <!-- Station 1 -->
+                <div class="col-md-4 station-card"
+                    data-location="mumbai">
+
+                    <div class="card h-100 shadow-sm">
+
+                        <img src="images/station.jpeg"
+                            class="card-img-top"
+                            alt="GreenCharge Station">
+
+                        <div class="card-body">
+
+                            <h5 class="card-title">
+                                GreenCharge Station
+                            </h5>
+
+                            <p class="card-text">
+                                📍 Mumbai
+                            </p>
+
+                            <p>
+                                ⚡ DC Fast Charging
+                            </p>
+
+                            <p>
+                                💰 ₹15 / kWh
+                            </p>
+
+                            <p class="text-success fw-bold">
+                                🟢 Available
+                            </p>
+
+                            <a href="booking.html"
+                                class="btn btn-success">
+                                Book Now
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Station 2 -->
+                <div class="col-md-4 station-card"
+                    data-location="thane">
+
+                    <div class="card h-100 shadow-sm">
+
+                        <img src="images/charging.jpeg"
+                            class="card-img-top"
+                            alt="PowerGo Station">
+
+                        <div class="card-body">
+
+                            <h5 class="card-title">
+                                PowerGo Station
+                            </h5>
+
+                            <p class="card-text">
+                                📍 Thane
+                            </p>
+
+                            <p>
+                                ⚡ Fast Charging
+                            </p>
+
+                            <p>
+                                💰 ₹18 / kWh
+                            </p>
+
+                            <p class="text-warning fw-bold">
+                                🟡 Limited Slots
+                            </p>
+
+                            <a href="booking.html"
+                                class="btn btn-success">
+                                Book Now
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Station 3 -->
+                <div class="col-md-4 station-card"
+                    data-location="navi mumbai">
+
+                    <div class="card h-100 shadow-sm">
+
+                        <img src="images/charging-station.jpeg"
+                            class="card-img-top"
+                            alt="EcoVolt Station">
+
+                        <div class="card-body">
+
+                            <h5 class="card-title">
+                                EcoVolt Station
+                            </h5>
+
+                            <p class="card-text">
+                                📍 Navi Mumbai
+                            </p>
+
+                            <p>
+                                ⚡ AC & DC Charging
+                            </p>
+
+                            <p>
+                                💰 ₹12 / kWh
+                            </p>
+
+                            <p class="text-success fw-bold">
+                                🟢 Available
+                            </p>
+
+                            <a href="booking.html"
+                                class="btn btn-success">
+                                Book Now
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Station 4 -->
+                <div class="col-md-4 station-card"
+                    data-location="andheri">
+
+                    <div class="card h-100 shadow-sm">
+
+                        <img src="images/andheri.jpeg"
+                            class="card-img-top"
+                            alt="VoltWay Station">
+
+                        <div class="card-body">
+
+                            <h5 class="card-title">
+                                VoltWay Station
+                            </h5>
+
+                            <p class="card-text">
+                                📍 Andheri
+                            </p>
+
+                            <p>
+                                ⚡ DC Fast Charging
+                            </p>
+
+                            <p>
+                                💰 ₹16 / kWh
+                            </p>
+
+                            <p class="text-success fw-bold">
+                                🟢 Available
+                            </p>
+
+                            <a href="booking.html"
+                                class="btn btn-success">
+                                Book Now
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Station 5 -->
+                <div class="col-md-4 station-card"
+                    data-location="borivali">
+
+                    <div class="card h-100 shadow-sm">
+
+                        <img src="images/borivali.jpeg"
+                            class="card-img-top"
+                            alt="ChargePoint Hub">
+
+                        <div class="card-body">
+
+                            <h5 class="card-title">
+                                ChargePoint Hub
+                            </h5>
+
+                            <p class="card-text">
+                                📍 Borivali
+                            </p>
+
+                            <p>
+                                ⚡ AC Charging
+                            </p>
+
+                            <p>
+                                💰 ₹14 / kWh
+                            </p>
+
+                            <p class="text-danger fw-bold">
+                                🔴 Full
+                            </p>
+
+                            <a href="booking.html"
+                                class="btn btn-success">
+                                Book Now
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Station 6 -->
+                <div class="col-md-4 station-card"
+                    data-location="palghar">
+
+                    <div class="card h-100 shadow-sm">
+
+                        <img src="images/palghar.png"
+                            class="card-img-top"
+                            alt="EV Power Station">
+
+                        <div class="card-body">
+
+                            <h5 class="card-title">
+                                EV Power Station
+                            </h5>
+
+                            <p class="card-text">
+                                📍 Palghar
+                            </p>
+
+                            <p>
+                                ⚡ DC Fast Charging
+                            </p>
+
+                            <p>
+                                💰 ₹17 / kWh
+                            </p>
+
+                            <p class="text-success fw-bold">
+                                🟢 Available
+                            </p>
+
+                            <a href="booking.html"
+                                class="btn btn-success">
+                                Book Now
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- No Result -->
+            <div id="noResult"
+                class="text-center mt-5"
+                style="display: none;">
+
+                <h4 class="text-muted">
+                    😔 No charging stations found.
+                </h4>
+
+                <p class="text-muted">
+                    Try another city or area.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+
+        <p class="mb-0">
+            © 2026 EV Charge Finder. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script>
+
+        // Get location from index.html
+        let urlParams =
+            new URLSearchParams(window.location.search);
+
+        let locationFromHome =
+            urlParams.get("location");
+
+
+        // If location comes from home page
+        if (locationFromHome) {
+
+            document.getElementById("stationSearch").value =
+                locationFromHome;
+
+            searchStations();
+        }
+
+
+        // Search stations function
+        function searchStations() {
+
+            let searchValue =
+                document.getElementById("stationSearch")
+                .value
+                .toLowerCase()
+                .trim();
+
+
+            let stations =
+                document.querySelectorAll(".station-card");
+
+
+            let message =
+                document.getElementById("searchMessage");
+
+
+            let noResult =
+                document.getElementById("noResult");
+
+
+            // If search box is empty
+            if (searchValue === "") {
+
+                stations.forEach(function(station) {
+
+                    station.style.display = "block";
+
+                });
+
+                message.innerHTML = "";
+
+                noResult.style.display = "none";
+
+                return;
+            }
+
+
+            let found = false;
+
+
+            // Check every station
+            stations.forEach(function(station) {
+
+                let location =
+                    station.getAttribute("data-location");
+
+
+                if (location.includes(searchValue)) {
+
+                    station.style.display = "block";
+
+                    found = true;
+
+                } else {
+
+                    station.style.display = "none";
+
+                }
+
+            });
+
+
+            // If station found
+            if (found) {
+
+                message.innerHTML =
+                    "Charging stations available in <strong>"
+                    + searchValue +
+                    "</strong>";
+
+                message.className =
+                    "text-center text-success mt-3";
+
+                noResult.style.display = "none";
+
+            }
+
+
+            // If station not found
+            else {
+
+                message.innerHTML =
+                    "No charging stations found in <strong>"
+                    + searchValue +
+                    "</strong>";
+
+                message.className =
+                    "text-center text-danger mt-3";
+
+                noResult.style.display = "block";
+
+            }
+
+        }
+
+    </script>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+</body>
+
+</html>
+
